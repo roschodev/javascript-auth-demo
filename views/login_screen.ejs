@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/front-end/login-screen/login_screen.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="login-form-container">
+        <form class="login-form" action="/login" method="POST">
+            <h2>Login</h2>
+
+            <div class="input-group">
+                <label>Email</label>
+                <input type="email" name="email" required>
+            </div>
+
+            <div class="input-group">
+                <label>Password</label>
+                <input type="password" name="password" required>
+            </div>
+
+            <button type="submit">Login</button>
+
+            <% if (error) { %>
+                <div id="error-text">
+                    <p style="color:red; padding: 5%;"><%= error %></p>
+                </div>
+            <% } %>
+            
+            <p class="signup-text">Don't have an account? <a href="/front-end/register-screen/register_screen.html">Sign up</a></p>
+        </form>
+    </div>
+</body>
+</html>
